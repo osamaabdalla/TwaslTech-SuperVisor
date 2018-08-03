@@ -201,18 +201,29 @@ export default class Home extends Component<Props> {
          >
          <MapView.Marker
            coordinate={this.state.coordinate}
-           image={require('../images/busPin.png')}
            title={'The Bus location'}
            onPress={()=>this.showHideBusModal()}
+         >
+         <Image
+           source={require('../images/busPin.png')}
+           style={{width:40,height:60}}
+           resizeMode="contain"
          />
+       </MapView.Marker>
+
           {this.state.hajjs.map((marker, index) => (
             <MapView.Marker
               key={"hajjindex"+index}
               coordinate={marker.latlng}
               title={marker.name}
-              image={require('../images/othersHajjsPin.png')}
               onPress={()=>self.showHajjModall(marker)}
-            />
+            >
+              <Image
+                source={require('../images/othersHajjsPin.png')}
+                style={{width:40,height:60}}
+                resizeMode="contain"
+              />
+            </MapView.Marker>
           ))}
         </MapView>
 
