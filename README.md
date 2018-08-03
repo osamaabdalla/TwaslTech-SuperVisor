@@ -1,4 +1,4 @@
-# M-011-TwaslTech :
+# M-011-TwaslTech-SuperVisor :
 repo for hajjhackathon
 
 * this project is based on 'react-native': https://facebook.github.io/react-native/docs/getting-started *
